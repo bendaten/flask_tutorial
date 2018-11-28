@@ -10,7 +10,7 @@
 - [x] ~~Chapter 4: Database~~
 - [x] ~~Chapter 5: User Logins~~
 - [x] ~~Chapter 6: Profile Page and Avatars~~
-- [ ] Chapter 7: Error Handling
+- [x] ~~Chapter 7: Error Handling~~
 - [ ] Chapter 8: Followers
 - [ ] Chapter 9: Pagination
 - [ ] Chapter 10: Email Support
@@ -77,4 +77,11 @@
 
 ### Chapter 7: Error Handling
 - error handling in Flask
+- working with debug mode
+- creating error pages
+- sending email on crash
+- logging
+- customizing a flask form to add special validations
+
+### Chapter 8: Followers
 - 
