@@ -1,5 +1,5 @@
 # Flask Tutorial
-## Following a tutorial called Flask Mega-Tutorial
+## Following a tutorial called Flask Mega-Tutorial - By Miguel Grinberg
 
 [Tutorial Home Page](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
@@ -84,4 +84,8 @@
 - customizing a flask form to add special validations
 
 ### Chapter 8: Followers
-- 
+- many to many - followers relation table
+- define a relationship field with the helper table
+- piping query operations like Obj.query.join().filter().order_by()
+- unit testing
+- implement following and followed relationships between users
