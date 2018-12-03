@@ -11,8 +11,8 @@
 - [x] ~~Chapter 5: User Logins~~
 - [x] ~~Chapter 6: Profile Page and Avatars~~
 - [x] ~~Chapter 7: Error Handling~~
-- [ ] Chapter 8: Followers
-- [ ] Chapter 9: Pagination
+- [x] ~~Chapter 8: Followers~~
+- [x] ~~Chapter 9: Pagination~~
 - [ ] Chapter 10: Email Support
 - [ ] Chapter 11: Facelift
 - [ ] Chapter 12: Dates and Times
@@ -89,3 +89,17 @@
 - piping query operations like Obj.query.join().filter().order_by()
 - unit testing
 - implement following and followed relationships between users
+
+### Chapter 9: Pagination
+- implementing the post form and showing followed posts on home page
+- implementing explore page and user links
+- pagination
+- relative time (mine):
+  - older than a year - YYYY-MM-DD HH:mm:SS
+  - 7 days to one year - Feb 07 HH:mm:SS
+  - 1 to 7 days - Tue HH:mm:SS
+  - 6 hr to one day - HH:mm:SS
+  - 90 min to 6 hr - about <x> hours ago
+  - 60 to 90 min - about an hour ago
+  - 2 to 60 min - <x> minutes ago
+  - <2 min - a moment ago

@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from hashlib import md5
 
 from app import db, login
-
+from app.relative_time import relative_time_format
 
 followers = db.Table('followers',
                      db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
@@ -40,7 +40,7 @@ class User(UserMixin, db.Model):
         return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
 
     def last_seen_fmt(self):
-        return self.last_seen.strftime("%Y-%m-%d %H:%M:%S")
+        return relative_time_format(self.last_seen)
 
     def follow(self, user):
         if not self.is_following(user):
@@ -76,6 +76,9 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+    def timestamp_fmt(self):
+        return relative_time_format(self.timestamp)
 
     @staticmethod
     def cleanup():
