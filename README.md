@@ -119,3 +119,7 @@ Improve the application look and feel
 - use bootstrap/wtf.html for automatic form builder
 - update _post.html to look good under bootstrap
 - rendering pagination links
+
+### Chapter 12: Dates and Times
+- converting UTC times to local TZ
+- Moment.js and Flask-Moment
