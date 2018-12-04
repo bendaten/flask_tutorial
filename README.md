@@ -14,7 +14,7 @@
 - [x] ~~Chapter 8: Followers~~
 - [x] ~~Chapter 9: Pagination~~
 - [x] ~~Chapter 10: Email Support~~
-- [ ] Chapter 11: Facelift
+- [x] ~~Chapter 11: Facelift~~
 - [ ] Chapter 12: Dates and Times
 - [ ] Chapter 13: I18n and L10n
 - [ ] Chapter 14: Ajax
@@ -111,3 +111,11 @@ Reset password through an emailed link
 - sending and validating the token via email
 - implementing the email request and reset password page
 - asynchronous process with threading
+
+### Chapter 11: Facelift
+Improve the application look and feel
+- CSS Frameworks - Bootstrap
+- derive base.html from bootstrap/base.html
+- use bootstrap/wtf.html for automatic form builder
+- update _post.html to look good under bootstrap
+- rendering pagination links
