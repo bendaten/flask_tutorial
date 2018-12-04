@@ -13,7 +13,7 @@
 - [x] ~~Chapter 7: Error Handling~~
 - [x] ~~Chapter 8: Followers~~
 - [x] ~~Chapter 9: Pagination~~
-- [ ] Chapter 10: Email Support
+- [x] ~~Chapter 10: Email Support~~
 - [ ] Chapter 11: Facelift
 - [ ] Chapter 12: Dates and Times
 - [ ] Chapter 13: I18n and L10n
@@ -103,3 +103,11 @@
   - 60 to 90 min - about an hour ago
   - 2 to 60 min - <x> minutes ago
   - <2 min - a moment ago
+  
+### Chapter 10: Email Support
+Reset password through an emailed link
+- Flask-Mail and JSON Web Tokens
+- encoding/decoding with JWT
+- sending and validating the token via email
+- implementing the email request and reset password page
+- asynchronous process with threading
