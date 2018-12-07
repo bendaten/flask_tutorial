@@ -15,8 +15,8 @@
 - [x] ~~Chapter 9: Pagination~~
 - [x] ~~Chapter 10: Email Support~~
 - [x] ~~Chapter 11: Facelift~~
-- [ ] Chapter 12: Dates and Times
-- [ ] Chapter 13: I18n and L10n
+- [x] ~~Chapter 12: Dates and Times~~
+- [x] ~~Chapter 13: I18n and L10n~~
 - [ ] Chapter 14: Ajax
 - [ ] Chapter 15: A Better Application Structure
 - [ ] Chapter 16: Full-Text Search
@@ -123,3 +123,14 @@ Improve the application look and feel
 ### Chapter 12: Dates and Times
 - converting UTC times to local TZ
 - Moment.js and Flask-Moment
+
+### Chapter 13: I18n and L10n
+Internationalization and Localization
+- Flask-Babel
+- language and country codes
+- localeselector decorator
+- marking the text to translate
+- extracting text to translate (.pot)
+- adding translation to another language (.po)
+- compile the translation and generate an (.mo)
+- create flask commands with cli
