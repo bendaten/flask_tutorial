@@ -1,7 +1,12 @@
 # ignore all PyCharm files
 .idea/
 */__pycache__/
+
 *.pyc
 *.pot
+*.mo
 venv/
+app.db
 logs/
+course/
+.DS_Store
