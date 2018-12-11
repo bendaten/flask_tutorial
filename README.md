@@ -114,7 +114,7 @@ Reset password through an emailed link
 
 ### Chapter 11: Facelift
 Improve the application look and feel
-- CSS Frameworks - Bootstrap
+- CSS Frameworks - [Bootstrap](https://getbootstrap.com/docs/3.3/getting-started/#examples)
 - derive base.html from bootstrap/base.html
 - use bootstrap/wtf.html for automatic form builder
 - update _post.html to look good under bootstrap
@@ -133,4 +133,15 @@ Internationalization and Localization
 - extracting text to translate (.pot)
 - adding translation to another language (.po)
 - compile the translation and generate an (.mo)
-- create flask commands with cli
+- create flask commands with cli. Remember to export FLASK_APP=microblog.py in the env shell before calling these commands
+
+### Chapter 14: Ajax
+Server/Client side components - Translate posts contents
+- Ajax - Asynchronous JavaScript and XML (today XML is mostly replaced by JSON)
+- language identification [guess_language](https://pypi.org/project/guess_language-spirit/)
+- add column to Post to store language. this way detection is run only once, when the post is submitted by the user
+- add code in index() to detect language and store in db
+- show a translate link if the detected language is different for the locale one
+- 3<sup>rd</sup> party translator - Microsoft Azure - translator API. set key
+- first implement server-side translation
+- ajax from client
