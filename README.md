@@ -17,8 +17,8 @@
 - [x] ~~Chapter 11: Facelift~~
 - [x] ~~Chapter 12: Dates and Times~~
 - [x] ~~Chapter 13: I18n and L10n~~
-- [ ] Chapter 14: Ajax
-- [ ] Chapter 15: A Better Application Structure
+- [x] ~~Chapter 14: Ajax~~
+- [x] ~~Chapter 15: A Better Application Structure~~
 - [ ] Chapter 16: Full-Text Search
 - [ ] Chapter 17: Deployment on Linux
 - [ ] Chapter 18: Deployment on Heroku
@@ -59,9 +59,24 @@
 ### Chapter 4: Database
 - using flask-sqlalchey - an ORM and flask-migrate
 - create the db model for user
+  - \_\_repr\_\_ instead of \_\_str\_\_
 - create the initial migration
+  - flask db init (requires FLASK_APP to be set) - creates the migrations directory
+  - flask db migrate -m "comment here" creates the db migration in versions
+  - flask db upgrade - creates (or updates) the database
+  - <i>flask db downgrad</i> to revert the previous
+  - flask db history
 - adding db model for post with a foreign key for user id
+  - using utcnow to set timestamp in GMT
+  - user_id relationship to the User table (foreign key)
+  - define a db.relationship in User to get the list of posts. set lazy='dynamic' to have posts as a query rather
+    than a list, so it can be customized during use
 - running from the shell. using flask shell and adding shell_context_processor
+  - db.session.add() and db.session.commit()
+  - Object.query.all() for all the objects
+  - Object.query.get(id) by id
+  - Object.query.oder_by(Object.field.desc()).all() all objects sorted by field in descending order
+  - @app.shell_context_processor
 
 ### Chapter 5: User Logins
 - password hashing
@@ -145,3 +160,23 @@ Server/Client side components - Translate posts contents
 - 3<sup>rd</sup> party translator - Microsoft Azure - translator API. set key
 - first implement server-side translation
 - ajax from client
+
+### Chapter 15: A Better Application Structure
+Discuss ways to make the application more scalable, maintainable, and better organized.
+- current structure is based on function - views, forms, templates, email, etc
+- using blueprint, a factory to initiate application instances, with different configurations
+- separate the application to blueprints for the different aspects of the application, authentication,
+errors, and main. Each blueprint may contain views and forms and templates and is a package
+- blueprints are dormant until registered with the application
+- error handling have the errors package (and sub-dir) under app and an errors sub-dir under templates,
+and in these have all the related files to error handling
+- authentication blueprint
+- main app blueprint
+- improve unit testing
+- environment variables
+  - install python-dotenv
+  - have all the environment variables set in .env
+  - load_dotenv
+- requirements file
+  - pip freeze > requirements.txt
+  - pip install -r requirements.txt
