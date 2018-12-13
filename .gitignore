@@ -10,3 +10,4 @@ app.db
 logs/
 course/
 .DS_Store
+.env
